@@ -32,7 +32,7 @@ public class AmazonTestCase {
     }
 
     @Test
-    public void SuccessfulVirgosolTest() {
+    public void SuccessfulAmazonTest() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-link-accountList-nav-line-1")));
 
@@ -84,7 +84,7 @@ public class AmazonTestCase {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='a-section a-spacing-base']/span/input")));
         WebElement listText = driver.findElement(By.xpath("//div[@class='a-section a-spacing-base']/span/input"));
         listText.clear();
-        listText.sendKeys("Virgosol Liste");
+        listText.sendKeys("Amazon Liste");
 
         WebElement createListButton = driver.findElement(By.xpath("//span[@id='wl-redesigned-create-list']"));
         createListButton.click();
@@ -139,7 +139,7 @@ public class AmazonTestCase {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("profile-list-name")));
         String listName = driver.findElement(By.id("profile-list-name")).getText();
-        Assert.assertEquals(listName, "Virgosol Liste");
+        Assert.assertEquals(listName, "Amazon Liste");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(@id,'delete-button')]")));
         WebElement deleteButton = driver.findElement(By.xpath("//span[contains(@id,'delete-button')]"));
